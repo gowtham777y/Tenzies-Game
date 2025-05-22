@@ -14,12 +14,19 @@ export default function App() {
         }));
     }
 
+    function hold(id) {
+        setDiceArray(prev => prev.map(entry => {
+            if (entry.id === id){
+                return {...entry, isHeld: !entry.isHeld}
+            }
+            return entry;
+        }))
+    }
+
     const [diceArray, setDiceArray] = React.useState(generateAllNewDice());
 
-    console.log(diceArray);
-
     const dice = diceArray.map(entry => (
-        <Die key = {entry.id} value = {entry.value} isHeld = {entry.isHeld}/>
+        <Die key = {entry.id} id = {entry.id} value = {entry.value} isHeld = {entry.isHeld} clickHandler = {hold}/>
     ))
 
     function changeDice() {
