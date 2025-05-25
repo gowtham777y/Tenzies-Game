@@ -33,6 +33,7 @@ main{
   flex-direction: column;
   width: 100%;
   align-items: center;
+  font-family: Karla, sans-serif;
 }
 
 .buttonsDiv {
@@ -55,8 +56,10 @@ main{
 
 .rollDice {
   height: 50px;
-  width: 100px;
+  width: auto;
   background: #5035FF;
+  white-space: nowrap;
+  padding: 6px 21px;
   color: #FFFFFF;
   font-family: Karla, sans-serif;
   font-size: 1.2rem;
